@@ -8,7 +8,7 @@ namespace PortfolioWithRazorPages.Models
 {
     public class Project
     {
-        public string Id { get; set; }
+        public Long Id { get; set; }
         [Required]
         [MinLength(10)]
         public string Name { get; set; }

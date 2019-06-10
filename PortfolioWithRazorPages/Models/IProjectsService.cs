@@ -10,6 +10,7 @@ namespace PortfolioWithRazorPages.Models
         Task SaveAsync(Project project);
         Task DeleteAsync(long id);
         Task<Project> FindAsync(long id);
-        Task<Project[]> GetAllAsync();
+        Task<Project[]> GetAllAsync(int? count = null, int? page = null);
+        IQueryable<Project> GetAll(int? count = null, int? page = null);
     }
 }

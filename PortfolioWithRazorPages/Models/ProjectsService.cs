@@ -1,11 +1,53 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace PortfolioWithRazorPages.Models
 {
-    public class ProjectsService
+    public class ProjectsService : IProjectsService
     {
+        private readonly ProjectsDbContext _dbContext;
+        public ProjectsService()
+        {
+            var options = new DbContextOptionsBuilder<ProjectsDbContext>()
+                .UseInMemoryDatabase("Portfolio")
+                .Options;
+            _dbContext = new ProjectsDbContext(options);
+        }
+        public async Task DeleteAsync(long id)
+        {
+            _dbContext.Projects.Remove(new Project { Id = id });
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public Task<Project> FindAsync(long id)
+        {
+            return _dbContext.Projects.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public IQueryable<Project> GetAll(int? count = null, int? page = null)
+        {
+            var actualCount = count.GetValueOrDefault(10);
+
+            return _dbContext.Projects
+                    .Skip(actualCount * page.GetValueOrDefault(0))
+                    .Take(actualCount);
+        }
+
+        public Task<Project[]> GetAllAsync(int? count = null, int? page = null)
+        {
+            return GetAll(count, page).ToArrayAsync();
+        }
+
+        public async Task SaveAsync(Project project)
+        {
+            var isNew = project.Id == default;
+
+            _dbContext.Entry(project).State = isNew ? EntityState.Added : EntityState.Modified;
+
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
