@@ -8,26 +8,34 @@
 
 <h1>Recent Projects</h1>
 
-@foreach (var project in projects.Take(3))
-{
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="@project.GetInlineImageSrc()" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">@project.Name</h5>
-            <p class="card-text">@project.ShortDescription</p>
-        </div>
+<div class="container">
+    <div class="row">
+        @foreach (var project in projects.Take(3))
+        {
+            <div class="card project-card border-dark mb-3">
+                <img class="card-img-top" src="@project.GetInlineImageSrc()" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@project.Name</h5>
+                    <p class="card-text">@project.ShortDescription</p>
+                </div>
+            </div>
+        }
     </div>
-}
+</div>
 
-<h1>Recent Blog Posts</h1>
+<h1>Recent Posts</h1>
 
-@foreach (var post in blogPosts.Take(3))
-{
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="@post.GetInlineImageSrc()" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">@post.Title</h5>
-            <p class="card-text">@post.Body.Substring(0, 100)...</p>
-        </div>
+<div class="container">
+    <div class="row">
+        @foreach (var post in blogPosts.Take(3))
+        {
+            <div class="card blog-card border-dark mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">@post.Title</h5>
+                    <p class="card-text">@post.Body.Substring(0, 200)...</p>
+                    <p>Posted: @post.CreationDate.ToShortDateString()</p>
+                </div>
+            </div>
+        }
     </div>
-}
+</div>
