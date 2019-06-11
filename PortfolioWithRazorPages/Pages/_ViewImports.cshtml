@@ -1,3 +1,6 @@
 @using PortfolioWithRazorPages
+@using PortfolioWithRazorPages.Models
 @namespace PortfolioWithRazorPages.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IBlogPostsService BlogPostsService
+@inject IProjectsService  ProjectsService

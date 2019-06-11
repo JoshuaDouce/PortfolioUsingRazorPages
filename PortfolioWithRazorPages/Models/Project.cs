@@ -8,13 +8,16 @@ namespace PortfolioWithRazorPages.Models
 {
     public class Project
     {
-        public Long Id { get; set; }
+        public long Id { get; set; }
         [Required]
         [MinLength(10)]
         public string Name { get; set; }
         [Required]
+        [StringLength(50, MinimumLength = 10)]
+        public string ShortDescription { get; set; }
+        [Required]
         [MinLength(50)]
-        public string Description { get; set; }
+        public string Body { get; set; }
 
         #region Image
 
