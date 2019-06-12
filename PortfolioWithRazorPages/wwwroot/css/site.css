@@ -55,6 +55,7 @@ body {
 
 /* Navigation Bar
 -------------------------------------------------- */
+
 .navbar {
     font-weight: bold;
 }
@@ -64,6 +65,10 @@ a.navbar-brand {
     text-align: center;
     word-break: break-all;
 }
+
+
+/* Short Bio
+-------------------------------------------------- */
 
 /*HTML Elements
 -------------------------------------------------- */
@@ -83,7 +88,6 @@ footer {
 .bg-dark-blue {
     background: var(--main-dark-primary);
 }
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
