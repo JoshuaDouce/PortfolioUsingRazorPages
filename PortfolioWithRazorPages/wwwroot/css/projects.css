@@ -1,0 +1,15 @@
+﻿.project{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.project-image {
+    margin: auto;
+}
+
+.divider {
+    height: 3px;
+    width: 100%;
+    margin: auto;
+    background-color: dimgray;
+}

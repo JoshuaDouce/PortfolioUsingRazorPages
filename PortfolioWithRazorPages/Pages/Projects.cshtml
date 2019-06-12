@@ -2,7 +2,20 @@
 @model PortfolioWithRazorPages.Pages.ProjectsModel
 @{
     ViewData["Title"] = "Projects";
+    var projects = await ProjectsService.GetAllAsync();
 }
 
 <h1>Projects</h1>
 
+@foreach (var project in projects)
+{
+    <div class="container-fluid project">
+        <div class="row">
+            <h2>@project.Name</h2>
+            <img src="@project.GetInlineImageSrc()" class="project-image"/>
+            <p>@project.ShortDescription</p>
+            <p>@project.Body</p>
+            <div class="divider"></div>
+        </div>
+    </div>
+}
