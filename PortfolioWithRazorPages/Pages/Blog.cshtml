@@ -2,7 +2,19 @@
 @model PortfolioWithRazorPages.Pages.BlogModel
 @{
     ViewData["Title"] = "Blog";
+    var blogPosts = await BlogPostsService.GetAllAsync();
 }
 
 <h1>Blog</h1>
 
+@foreach (var post in blogPosts)
+{
+    <div class="container-fluid blog-container">
+        <div class="row">
+            <h2>@post.Title</h2>
+            <p>@post.Body</p>
+            <img src="@post.GetInlineImageSrc()"/>
+            <p>@post.CreationDate.ToLongDateString()</p>
+        </div>
+    </div>
+}
