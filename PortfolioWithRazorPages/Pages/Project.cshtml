@@ -1,0 +1,14 @@
+﻿@page "{id}"
+@model PortfolioWithRazorPages.Pages.ProjectModel
+@{
+    var id = long.Parse((string)RouteData.Values["id"]);
+    var project = await ProjectsService.FindAsync(id);
+
+    ViewData["Title"] = project.Name;
+}
+
+<div>
+    <img src="@project.GetInlineImageSrc()"/>
+    <p>@project.ShortDescription</p>
+    <p>@project.Body</p>
+</div>
