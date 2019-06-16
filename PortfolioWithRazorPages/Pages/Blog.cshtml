@@ -12,9 +12,10 @@
     <div class="container-fluid blog-container">
         <div class="row">
             <h2>@post.Title</h2>
+            <img src="@post.GetInlineImageSrc()" />
             <p>@post.Body</p>
-            <img src="@post.GetInlineImageSrc()"/>
             <p>@post.CreationDate.ToLongDateString()</p>
+            <div class="divider"></div>
         </div>
     </div>
 }

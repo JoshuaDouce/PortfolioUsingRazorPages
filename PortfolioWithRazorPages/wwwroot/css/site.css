@@ -89,6 +89,15 @@ footer {
     background: var(--main-dark-primary);
 }
 
+/*Global Classes
+-------------------------------------------------- */
+.divider {
+    height: 3px;
+    width: 100%;
+    margin: auto;
+    background-color: dimgray;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     h1 {
