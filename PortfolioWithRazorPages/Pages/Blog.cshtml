@@ -1,0 +1,14 @@
+﻿@page "{id}"
+@model PortfolioWithRazorPages.Pages.BlogModel
+@{
+    var id = long.Parse((string)RouteData.Values["id"]);
+    var blog = await BlogPostsService.FindAsync(id);
+
+    ViewData["Title"] = blog.Title;
+}
+
+<div>
+    <img src="@blog.GetInlineImageSrc()" />
+    <p>@blog.Body</p>
+    <p>@blog.CreationDate.ToLongDateString()</p>
+</div>
