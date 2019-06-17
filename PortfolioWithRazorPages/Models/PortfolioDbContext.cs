@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace PortfolioWithRazorPages.Models
 {
-    public class BlogPostsDbContext : DbContext
+    public class PortfolioDbContext : DbContext
     {
         public DbSet<BlogPost> BlogPosts { get; set; }
-
-        public BlogPostsDbContext(DbContextOptions<BlogPostsDbContext> options) : base(options)
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<SiteUser> SiteUsers { get; set; }
+        public PortfolioDbContext(DbContextOptions<PortfolioDbContext> options) : base(options)
         {
+            Database.EnsureCreated();
             this.EnsureSeedData();
         }
+
     }
 }

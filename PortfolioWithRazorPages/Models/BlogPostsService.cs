@@ -8,14 +8,11 @@ namespace PortfolioWithRazorPages.Models
 {
     public class BlogPostsService : IBlogPostsService
     {
-        private readonly BlogPostsDbContext _dbContext;
+        private readonly PortfolioDbContext _dbContext;
 
-        public BlogPostsService()
+        public BlogPostsService(PortfolioDbContext dbContext)
         {
-            var options = new DbContextOptionsBuilder<BlogPostsDbContext>()
-                .UseInMemoryDatabase("Portfolio")
-                .Options;
-            _dbContext = new BlogPostsDbContext(options);
+            _dbContext = dbContext;
         }
 
         public async Task DeleteAsync(long id)

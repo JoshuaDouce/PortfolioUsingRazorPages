@@ -8,13 +8,10 @@ namespace PortfolioWithRazorPages.Models
 {
     public class ProjectsService : IProjectsService
     {
-        private readonly ProjectsDbContext _dbContext;
-        public ProjectsService()
+        private readonly PortfolioDbContext _dbContext;
+        public ProjectsService(PortfolioDbContext dbContext)
         {
-            var options = new DbContextOptionsBuilder<ProjectsDbContext>()
-                .UseInMemoryDatabase("Portfolio")
-                .Options;
-            _dbContext = new ProjectsDbContext(options);
+            _dbContext = dbContext;
         }
         public async Task DeleteAsync(long id)
         {
