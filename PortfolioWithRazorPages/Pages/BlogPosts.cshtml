@@ -7,13 +7,15 @@
 
 @foreach (var post in blogPosts)
 {
-    <div class="container-fluid blog-container">
-        <div class="row">
-            <h2>@post.Title</h2>
-            <img src="@post.GetInlineImageSrc()" />
-            <p>@post.Body</p>
-            <p>@post.CreationDate.ToLongDateString()</p>
-            <div class="divider"></div>
+    <a asp-page="/Blog" asp-route-id="@post.Id">
+        <div class="container-fluid blog-container">
+            <div class="row">
+                <h2>@post.Title</h2>
+                <img src="@post.GetInlineImageSrc()" />
+                <p>@post.Body</p>
+                <p>@post.CreationDate.ToLongDateString()</p>
+                <div class="divider"></div>
+            </div>
         </div>
-    </div>
+    </a>
 }
