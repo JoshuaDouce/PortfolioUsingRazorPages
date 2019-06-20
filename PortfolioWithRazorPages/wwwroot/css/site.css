@@ -4,7 +4,9 @@ for details on configuring this project to bundle and minify static web assets. 
 /* Variable
 -------------------------------------------------- */
 :root {
-    --main-dark-primary: #283593;
+    --main-dark-primary: #1a237e;
+    --secondary-light-primary: #bbdefb;
+    --secondary-light-variant: #eeffff;
 }
 
 /* Sticky footer styles
@@ -20,9 +22,6 @@ html {
 
 .border-top {
   border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
@@ -64,6 +63,10 @@ a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
+}
+
+.navbar-default{
+   border:none;
 }
 
 

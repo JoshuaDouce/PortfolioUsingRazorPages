@@ -7,10 +7,9 @@
 }
 
     <div class="container-fluid" id="homepage-top">
-        <h1 id="homepage-top-title">Bio</h1>
-        <img />
-        <p>Joshua Douce</p>
-        <p>Short snipper about me</p>
+        <img src="~/media/me.jpg" id="profile-img"/>
+        <p>I am a Software Developer and a student at Sheffield Hallam University studying Software Engineering. I am passionate about software
+        development and currently work mainly in Microsofts asp.net/.net core stack. In my spare time I like to devlop Android applications using Kotlin.</p>
     </div>
 
 
@@ -24,7 +23,7 @@
     <div class="row">
         @foreach (var project in projects.Take(3))
         {
-            <div class="card project-card border-dark mb-3">
+            <div class="card project-card">
                 <img class="card-img-top" src="@project.GetInlineImageSrc()" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">@project.Name</h5>
@@ -41,7 +40,7 @@
     <div class="row">
         @foreach (var post in blogPosts.Take(3))
         {
-            <div class="card blog-card border-dark mb-3">
+            <div class="card blog-card border-bottom">
                 <div class="card-body">
                     <h5 class="card-title">@post.Title</h5>
                     <p class="card-text">@post.Body.Substring(0, 200)...</p>
