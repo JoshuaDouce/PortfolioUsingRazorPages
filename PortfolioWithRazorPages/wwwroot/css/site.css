@@ -33,6 +33,11 @@ button.accept-policy {
   line-height: inherit;
 }
 
+a{
+    color: black;
+    text-decoration: none;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

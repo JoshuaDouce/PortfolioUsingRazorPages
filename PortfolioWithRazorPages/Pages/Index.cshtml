@@ -23,6 +23,7 @@
     <div class="row">
         @foreach (var project in projects.Take(3))
         {
+        <a asp-page="/Project" asp-route-id="@project.Id">
             <div class="card project-card">
                 <img class="card-img-top" src="@project.GetInlineImageSrc()" alt="Card image cap">
                 <div class="card-body">
@@ -30,6 +31,7 @@
                     <p class="card-text">@project.ShortDescription</p>
                 </div>
             </div>
+        </a>
         }
     </div>
 </div>
@@ -40,6 +42,7 @@
     <div class="row">
         @foreach (var post in blogPosts.Take(3))
         {
+        <a asp-page="/Blog" asp-route-id="@post.Id">
             <div class="card blog-card border-bottom">
                 <div class="card-body">
                     <h5 class="card-title">@post.Title</h5>
@@ -47,6 +50,7 @@
                     <p>Posted: @post.CreationDate.ToShortDateString()</p>
                 </div>
             </div>
+        </a>
         }
     </div>
 </div>
