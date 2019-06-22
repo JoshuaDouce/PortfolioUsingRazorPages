@@ -10,11 +10,13 @@
     <a asp-page="/Project" asp-route-id="@project.Id">
         <div class="container-fluid project">
             <div class="row">
-                <h2>@project.Name</h2>
-                <img src="@project.GetInlineImageSrc()" class="project-image" />
-                <p>@project.ShortDescription</p>
-                <p>@project.Body</p>
-                <div class="divider"></div>
+                <div class="card">
+                    <h5 class="card-title">@project.Name</h5>
+                    <img src="@project.GetInlineImageSrc()" class="project-image card-img-top" />
+                    <div class="card-body">
+                        <p class="card-text">@project.Body</p>
+                    </div>
+                </div>
             </div>
         </div>
     </a>
