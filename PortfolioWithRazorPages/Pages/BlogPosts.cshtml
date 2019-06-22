@@ -8,13 +8,15 @@
 @foreach (var post in blogPosts)
 {
     <a asp-page="/Blog" asp-route-id="@post.Id">
-        <div class="container-fluid blog-container">
+        <div class="container-fluid blog-container">          
             <div class="row">
-                <h2>@post.Title</h2>
-                <img src="@post.GetInlineImageSrc()" />
-                <p>@post.Body</p>
-                <p>@post.CreationDate.ToLongDateString()</p>
-                <div class="divider"></div>
+                <div class="card">
+                    <h5 class="card-title">@post.Title</h5>
+                    <img src="@post.GetInlineImageSrc()" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">@post.Body.Substring(0, 200) ...</p>
+                    </div>
+                </div>
             </div>
         </div>
     </a>

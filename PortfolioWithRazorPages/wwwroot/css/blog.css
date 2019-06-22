@@ -1,2 +1,7 @@
-﻿body {
+﻿.card-title {
+    margin: 10px 10px;
+}
+
+.card {
+    text-align: center;
 }
