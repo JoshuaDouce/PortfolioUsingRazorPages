@@ -83,12 +83,23 @@ h1, h2 {
 }
 
 footer {
+    margin-top: 10px;
     text-align: center;
 }
 
 .container {
     padding: 0px;
 }
+
+.card {
+    text-align: center;
+    margin: 7.5px 15px 7.5px 15px;
+}
+
+.card-title {
+    margin: 10px 10px;
+}
+
 
 /*Colors
 -------------------------------------------------- */

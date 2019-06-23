@@ -5,19 +5,19 @@
     var projects = await ProjectsService.GetAllAsync();
 }
 
-@foreach (var project in projects)
-{
-    <a asp-page="/Project" asp-route-id="@project.Id">
-        <div class="container-fluid project">
-            <div class="row">
-                <div class="card">
-                    <h5 class="card-title">@project.Name</h5>
-                    <img src="@project.GetInlineImageSrc()" class="project-image card-img-top" />
-                    <div class="card-body">
-                        <p class="card-text">@project.Body.Substring(0, 200) ...</p>
+    <div class="projects-main">
+        @foreach (var project in projects)
+        {
+            <div class="project">
+                <a asp-page="/Project" asp-route-id="@project.Id">
+                    <div class="card project-list-card">
+                        <h5 class="card-title">@project.Name</h5>
+                        <img src="@project.GetInlineImageSrc()" class="project-image card-img-top" />
+                        <div class="card-body">
+                            <p class="card-text">@project.Body.Substring(0, 200) ...</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </div>
-    </a>
-}
+        }
+    </div>

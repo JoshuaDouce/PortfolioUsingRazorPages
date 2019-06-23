@@ -1,16 +1,31 @@
-﻿.project{
-    margin: 10px auto;
+﻿.project {
+    margin: -7.5px auto;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .project-image {
     margin: auto;
 }
 
-.card{
-    margin: 15px 10px;
+.projects-main {
+    text-align: center;
 }
 
-.card-title {
-    margin: 10px 10px;
+.card {
+    text-align: center;
+    margin: 7.5px 15px 7.5px 15px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .project {
+        margin: 5px;
+        width: 30%;
+        display: inline-block;
+    }
+
+    .project-list-card {
+        width: auto;
+    }
 }
