@@ -6,6 +6,10 @@
     var projects = await ProjectsService.GetAllAsync();
 }
 
+@section Title{
+
+}
+
 <div class="container-fluid" id="homepage-top">
     <img src="~/media/me.jpg" id="profile-img" />
     <p>
@@ -14,12 +18,7 @@
     </p>
 </div>
 
-
 <h1>Recent Projects</h1>
-
-@section Title{
-
-}
 
 <div class="container">
     <div class="row home-projects-row">

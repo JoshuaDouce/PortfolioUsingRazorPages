@@ -1,15 +1,7 @@
-﻿.project {
-    margin: -7.5px auto;
+﻿.projects-main {
     text-align: center;
+    padding-top: 1px;
     padding-bottom: 10px;
-}
-
-.project-image {
-    margin: auto;
-}
-
-.projects-main {
-    text-align: center;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

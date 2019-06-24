@@ -1,11 +1,7 @@
-﻿.blog {
-    margin: -7.5px auto;
+﻿.blog-posts-main {
     text-align: center;
+    padding-top: 1px;
     padding-bottom: 10px;
-}
-
-.blog-posts-main{
-    text-align: center;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

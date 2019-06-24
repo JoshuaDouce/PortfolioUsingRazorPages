@@ -1,14 +1,4 @@
-﻿.project-card, .blog-card {
-    width: 90%;
-    margin: 0px auto;
-    border: none;
-}
-
-#homepage-top-title {
-    margin-top: 0px;
-}
-
-#homepage-top {
+﻿#homepage-top {
     text-align: center;
     background-color: white;
     color: var(--main-dark-primary);
@@ -22,6 +12,12 @@
     width: 100px;
     margin: 10px 10px 10px 5px;
     border-radius: 50%;
+}
+
+.project-card, .blog-card {
+    width: 90%;
+    margin: 0px auto;
+    border: none;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -21,16 +21,10 @@ body {
     margin-bottom: 60px;
 }
 
-h1 {
-    color: white;
-    margin: 0px;
-    padding: 10px;
-}
-
 h1, h2 {
+    margin: 7.5px 0px;
     text-align: center;
-    margin: 5px;
-    padding: 5px;
+    font-weight: bold;
     color: var(--main-dark-primary);
 }
 
@@ -128,13 +122,12 @@ a.navbar-brand {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .card {
-        width: auto;
-        margin: auto;
+
+    html {
+        font-size: 16px;
     }
 
     h1 {
-        background-color: white;
         color: var(--main-dark-primary);
         margin: 20px;
         padding: 10px;
@@ -150,8 +143,9 @@ a.navbar-brand {
             border-bottom: 1px solid var(--main-dark-primary);
         }
 
-    html {
-        font-size: 16px;
+    .card {
+        width: auto;
+        margin: auto;
     }
 }
 
