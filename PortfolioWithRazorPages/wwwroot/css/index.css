@@ -4,13 +4,6 @@
     border: none;
 }
 
-h1 {
-    background-color: var(--main-dark-primary);
-    color: white;
-    margin: 0px;
-    padding: 10px;
-}
-
 #homepage-top-title {
     margin-top: 0px;
 }
@@ -31,11 +24,6 @@ h1 {
     border-radius: 50%;
 }
 
-a {
-    color: black;
-    text-decoration: none;
-}
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
@@ -49,19 +37,14 @@ a {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .projects-row, .blogs-row {
+    .home-projects-row, .home-blog-posts-row {
         text-align: center;
         margin-top: 10px;
     }
 
-    .projects-row {
+    .home-projects-row {
         width: 100%;
         margin: 0;
-    }
-
-    .card {
-        width: auto;
-        margin: auto;
     }
 
     .project-card {
@@ -93,23 +76,6 @@ a {
         border: none;
         border-radius: 0px;
     }
-
-    h1 {
-        background-color: white;
-        color: var(--main-dark-primary);
-        margin: 20px;
-        padding: 10px;
-        font-weight: bolder;
-    }
-
-        h1:after {
-            content: "";
-            display: block;
-            margin: 0 auto; 
-            width: 70%;
-            padding-top: 20px;
-            border-bottom: 1px solid var(--main-dark-primary);
-        }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

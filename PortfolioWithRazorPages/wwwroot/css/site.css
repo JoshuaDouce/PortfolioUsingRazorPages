@@ -1,7 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-/* Variable
+/* Variables
 -------------------------------------------------- */
 :root {
     --main-dark-primary: #1a237e;
@@ -9,48 +9,84 @@ for details on configuring this project to bundle and minify static web assets. 
     --secondary-light-variant: #eeffff;
 }
 
-/* Sticky footer styles
+/* HTML Elements
 -------------------------------------------------- */
 html {
+    position: relative;
+    min-height: 100%;
     font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+h1 {
+    color: white;
+    margin: 0px;
+    padding: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    color: var(--main-dark-primary);
+}
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/*Bootstrap Elements
+-------------------------------------------------- */
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.container {
+    padding: 0px;
+}
+
+/*Default Card Style
+-------------------------------------------------- */
+
+.card {
+    text-align: center;
+    margin: 7.5px 15px 7.5px 15px;
+}
+
+.card-title {
+    margin: 10px 10px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  height: 60px;
-  line-height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    height: 60px;
+    line-height: 60px;
 }
+
 
 /* Navigation Bar
 -------------------------------------------------- */
@@ -69,51 +105,10 @@ a.navbar-brand {
    border:none;
 }
 
-
-/* Short Bio
--------------------------------------------------- */
-
-/*HTML Elements
--------------------------------------------------- */
-h1, h2 {
-    text-align: center;
-    margin: 5px;
-    padding: 5px;
-    color: var(--main-dark-primary);
-}
-
-footer {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.container {
-    padding: 0px;
-}
-
-.card {
-    text-align: center;
-    margin: 7.5px 15px 7.5px 15px;
-}
-
-.card-title {
-    margin: 10px 10px;
-}
-
-
-/*Colors
+/*Background Colors
 -------------------------------------------------- */
 .bg-dark-blue {
     background: var(--main-dark-primary);
-}
-
-/*Global Classes
--------------------------------------------------- */
-.divider {
-    height: 3px;
-    width: 100%;
-    margin: auto;
-    background-color: dimgray;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -133,7 +128,31 @@ footer {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .card {
+        width: auto;
+        margin: auto;
+    }
 
+    h1 {
+        background-color: white;
+        color: var(--main-dark-primary);
+        margin: 20px;
+        padding: 10px;
+        font-weight: bolder;
+    }
+
+        h1:after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+            padding-top: 20px;
+            border-bottom: 1px solid var(--main-dark-primary);
+        }
+
+    html {
+        font-size: 16px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -143,3 +162,5 @@ footer {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 }
+
+

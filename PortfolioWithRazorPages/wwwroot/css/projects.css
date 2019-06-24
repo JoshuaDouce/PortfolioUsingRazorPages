@@ -12,11 +12,6 @@
     text-align: center;
 }
 
-.card {
-    text-align: center;
-    margin: 7.5px 15px 7.5px 15px;
-}
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .project {

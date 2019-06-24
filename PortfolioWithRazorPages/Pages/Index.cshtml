@@ -22,7 +22,7 @@
 }
 
 <div class="container">
-    <div class="row projects-row">
+    <div class="row home-projects-row">
         @foreach (var project in projects.Take(3))
         {
             <a asp-page="/Project" asp-route-id="@project.Id" class="project-card">
@@ -41,7 +41,7 @@
 <h1>Recent Posts</h1>
 
 <div class="container">
-    <div class="row blog-row">
+    <div class="row home-blog-posts-row">
         @foreach (var post in blogPosts.Take(3))
         {
             <a asp-page="/Blog" asp-route-id="@post.Id" class="blog-card">
