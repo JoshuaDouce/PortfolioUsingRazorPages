@@ -1,0 +1,35 @@
+﻿.about-main {
+    text-align: center;
+    color: var(--main-dark-primary);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.about-text {
+    margin: 5px 10px;
+}
+
+.about-img {
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+}
+
+#about-me-img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+#alfie-rosie {
+    width: 75%;
+}
+@media only screen and (min-width: 768px) {
+    #about-me-img {
+        width: 25%;
+    }
+
+    #alfie-rosie {
+        width: 40%;
+    }
+}
+

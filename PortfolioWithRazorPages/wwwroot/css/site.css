@@ -147,6 +147,10 @@ a.navbar-brand {
         width: auto;
         margin: auto;
     }
+
+    p{
+        font-size: large;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
