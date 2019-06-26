@@ -8,8 +8,8 @@
     <h1>Contact Me</h1>
 }
 
-<div asp-validation-summary="All">
-    <form method="post">
+<div class="container-fluid">
+    <form method="post" class="contact-form">
         <div class="form-group">
             <label asp-for="@Model.Name"></label>
             <input asp-for="@Model.Name" type="text" class="form-control" />
@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <label asp-for="@Model.Message"></label>
-            <textarea asp-for="@Model.Message" type="text" class="form-control"></textarea>
+            <textarea asp-for="@Model.Message" type="text" class="form-control" rows="7"></textarea>
             <span asp-validation-for="@Model.Message"></span>
         </div>
         <div class="form-group">
