@@ -3,3 +3,30 @@
 @{
     ViewData["Title"] = "Contact";
 }
+
+@section Title{
+    <h1>Contact Me</h1>
+}
+
+<div asp-validation-summary="All">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="@Model.Name"></label>
+            <input asp-for="@Model.Name" type="text" class="form-control" />
+            <span asp-validation-for="@Model.Name"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Email"></label>
+            <input asp-for="@Model.Email" type="text" class="form-control" />
+            <span asp-validation-for="@Model.Email"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Message"></label>
+            <textarea asp-for="@Model.Message" type="text" class="form-control"></textarea>
+            <span asp-validation-for="@Model.Message"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+    </form>
+</div>
