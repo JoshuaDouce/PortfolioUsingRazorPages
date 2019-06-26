@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,13 @@ namespace PortfolioWithRazorPages
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+            .UseKestrel(options => {
+                options.Listen(IPAddress.Loopback, 8088, listenOptions =>
+                {
+                    //Udate with real SSL Certificate
+                    listenOptions.UseHttps("testcertficate.pfx",  "test123");
+                });
+            });
     }
 }
