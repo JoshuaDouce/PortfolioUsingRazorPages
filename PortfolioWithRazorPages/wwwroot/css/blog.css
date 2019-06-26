@@ -4,6 +4,11 @@
     padding-bottom: 10px;
 }
 
+.blog-text-container {
+    padding: 10px 10px;
+    text-align: center;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .blog {
@@ -14,5 +19,21 @@
 
     .blog-list-card {
         width: auto;
+    }
+
+    .blog-detail-container {
+        display: inline-block;
+    }
+
+    .blog-text-container {
+        width: 49%;
+        padding: 10px 10px;
+        text-align: center;
+        float: right;
+    }
+
+    .blog-detail-container > img {
+        height: auto;
+        width: 49%;
     }
 }
