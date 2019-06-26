@@ -7,8 +7,10 @@
     ViewData["Title"] = project.Name;
 }
 
-<div>
+<div class="project-detail-container">
     <img src="@project.GetInlineImageSrc()"/>
-    <p>@project.ShortDescription</p>
-    <p>@project.Body</p>
+    <div class="project-text-container">
+        <p class="project-short-description">@project.ShortDescription</p>
+        <p class="project-body">@project.Body</p>
+    </div>
 </div>
