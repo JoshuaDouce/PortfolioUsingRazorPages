@@ -12,7 +12,6 @@
                 <a asp-page="/Blog" asp-route-id="@post.Id">
                     <div class="card blog-list-card">
                         <h5 class="card-title">@post.Title</h5>
-                        <img src="@post.GetInlineImageSrc()" class="card-img-top" />
                         <div class="card-body">
                             <p class="card-text">@post.Body.Substring(0, 200) ...</p>
                             <p class="card-text">@post.CreationDate.ToLongDateString()</p>
