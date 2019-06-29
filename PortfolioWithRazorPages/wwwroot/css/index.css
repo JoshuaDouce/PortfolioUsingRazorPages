@@ -35,7 +35,7 @@
 @media only screen and (min-width: 768px) {
     .home-projects-row, .home-blog-posts-row {
         text-align: center;
-        margin-top: 10px;
+        padding-top: 20px;
     }
 
     .home-projects-row {
@@ -44,9 +44,13 @@
     }
 
     .project-card {
-        width: 32%;
+        width: 30%;
         margin: auto;
     }
+
+        .project-card > .card > img{
+            height: 15rem;
+        }
 
     .blog-card{
         width: 97%;
@@ -57,8 +61,8 @@
     }
 
     #profile-img {
-        height: 175px;
-        width: 175px;
+        height: 150px;
+        width: 150px;
         margin: 25px 15px 15px 10px;
         border-radius: 50%;
     }

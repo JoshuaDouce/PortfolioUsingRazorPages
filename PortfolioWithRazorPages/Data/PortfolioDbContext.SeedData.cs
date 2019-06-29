@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PortfolioWithRazorPages.Models;
+using System;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace PortfolioWithRazorPages.Models
+namespace PortfolioWithRazorPages.Data
 {
     public static class PortfolioDbContextSeedData
     {

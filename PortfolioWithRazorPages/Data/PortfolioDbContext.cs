@@ -1,10 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PortfolioWithRazorPages.Models;
 
-namespace PortfolioWithRazorPages.Models
+namespace PortfolioWithRazorPages.Data
 {
     public class PortfolioDbContext : DbContext
     {
