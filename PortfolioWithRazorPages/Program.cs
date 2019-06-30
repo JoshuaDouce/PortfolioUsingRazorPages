@@ -21,12 +21,5 @@ namespace PortfolioWithRazorPages
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
-            //.UseKestrel(options => {
-            //    options.Listen(IPAddress.Loopback, 8088, listenOptions =>
-            //    {
-            //        //Udate with real SSL Certificate
-            //        listenOptions.UseHttps("testcertficate.pfx",  "test123");
-            //    });
-            //});
     }
 }
