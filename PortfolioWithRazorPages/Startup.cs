@@ -36,10 +36,7 @@ namespace PortfolioWithRazorPages
                 .AddCookie();
 
             services.AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-                .AddRazorPagesOptions(options => {
-                    options.Conventions.AuthorizeFolder("/Admin");
-                });
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDbContext<PortfolioDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("DataContext"));
@@ -47,7 +44,6 @@ namespace PortfolioWithRazorPages
 
             services.AddScoped<IBlogPostsService, BlogPostsService>();
             services.AddScoped<IProjectsService, ProjectsService>();
-            services.AddScoped<ISiteUsersService, SiteUsersService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
