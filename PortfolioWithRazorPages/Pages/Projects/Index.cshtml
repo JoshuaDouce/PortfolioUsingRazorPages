@@ -1,5 +1,5 @@
 ﻿@page
-@model PortfolioWithRazorPages.Pages.ProjectsModel
+@model PortfolioWithRazorPages.Pages.Projects.IndexModel
 @{
     ViewData["Title"] = "Projects";
     var projects = await ProjectsService.GetAllAsync();
@@ -21,3 +21,4 @@
             </div>
         }
     </div>
+

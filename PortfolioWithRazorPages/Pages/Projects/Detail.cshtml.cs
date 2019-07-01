@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PortfolioWithRazorPages.Pages
+namespace PortfolioWithRazorPages.Pages.Projects
 {
-    public class BlogModel : PageModel
+    public class DetailModel : PageModel
     {
         public void OnGet()
         {

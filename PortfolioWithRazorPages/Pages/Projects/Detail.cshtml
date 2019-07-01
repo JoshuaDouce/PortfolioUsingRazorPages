@@ -1,5 +1,5 @@
 ﻿@page "{id}"
-@model PortfolioWithRazorPages.Pages.ProjectModel
+@model PortfolioWithRazorPages.Pages.Projects.DetailModel
 @{
     var id = long.Parse((string)RouteData.Values["id"]);
     var project = await ProjectsService.FindAsync(id);
