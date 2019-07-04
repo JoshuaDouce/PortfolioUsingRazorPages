@@ -5,19 +5,19 @@
     var blogPosts = await BlogPostsService.GetAllAsync();
 }
 
-    <div class="blog-posts-main">
-        @foreach (var post in blogPosts)
-        {
-            <div class="blog">
-                <a asp-page="/Blog" asp-route-id="@post.Id">
-                    <div class="card blog-list-card">
-                        <h5 class="card-title">@post.Title</h5>
-                        <div class="card-body">
-                            <p class="card-text">@post.Body.Substring(0, 200) ...</p>
-                            <p class="card-text">@post.CreationDate.ToLongDateString()</p>
-                        </div>
+<div class="blog-posts-main">
+    @foreach (var post in blogPosts)
+    {
+        <div class="blog">
+            <a asp-page="/Blog/Detail" asp-route-id="@post.Id">
+                <div class="card blog-list-card">
+                    <h5 class="card-title">@post.Title</h5>
+                    <div class="card-body">
+                        <p class="card-text">@post.Body.Substring(0, 200) ...</p>
+                        <p class="card-text">@post.CreationDate.ToLongDateString()</p>
                     </div>
-                </a>
-            </div>
-        }
+                </div>
+            </a>
+        </div>
+    }
 </div>

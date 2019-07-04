@@ -56,13 +56,13 @@ namespace PortfolioWithRazorPages.Pages.Admin
                 }
             }
             await BlogPostsService.SaveAsync(blogPost);
-            return RedirectToPage("/Blog", new { id = blogPost.Id });
+            return RedirectToPage("/Blog/Detail", new { id = blogPost.Id });
         }
 
         public async Task<IActionResult> OnPostDelete()
         {
             await BlogPostsService.DeleteAsync(Id.Value);
-            return RedirectToPage("/Index");
+            return RedirectToPage("/Blog/Index");
         }
     }
 }

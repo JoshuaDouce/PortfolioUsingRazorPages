@@ -57,7 +57,7 @@ namespace PortfolioWithRazorPages.Pages.Admin
                 }
             }
             await ProjectsService.SaveAsync(project);
-            return RedirectToPage("/Project", new { id = project.Id });
+            return RedirectToPage("/Projects/Detail", new { id = project.Id });
         }
 
         public async Task<IActionResult> OnPostDelete() {

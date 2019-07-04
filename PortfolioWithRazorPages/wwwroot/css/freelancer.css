@@ -10865,6 +10865,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 .footer {
+  padding-bottom: 4rem;
   background-color: #2c3e50;
   color: #fff;
 }

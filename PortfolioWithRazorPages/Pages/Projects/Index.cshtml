@@ -9,7 +9,7 @@
         @foreach (var project in projects)
         {
             <div class="project">
-                <a asp-page="/Project" asp-route-id="@project.Id">
+                <a asp-page="/Projects/Details" asp-route-id="@project.Id">
                     <div class="card project-list-card">
                         <h5 class="card-title">@project.Name</h5>
                         <img src="@project.GetInlineImageSrc()" class="project-image card-img-top" />

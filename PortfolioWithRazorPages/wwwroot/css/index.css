@@ -37,6 +37,15 @@
     padding: 20px 0px;
 }
 
+.summary-container {
+    margin-top: 1rem;
+}
+
+#blog-summary {
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
