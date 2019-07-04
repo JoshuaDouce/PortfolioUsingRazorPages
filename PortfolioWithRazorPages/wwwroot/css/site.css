@@ -4,7 +4,7 @@ for details on configuring this project to bundle and minify static web assets. 
 /* Variables
 -------------------------------------------------- */
 :root {
-    --main-dark-primary: #1a237e;
+    --main-dark-primary: #2c3e50;
     --secondary-light-primary: #bbdefb;
     --secondary-light-variant: #eeffff;
 }
@@ -148,15 +148,6 @@ a.navbar-brand {
         font-size: 24px;
     }
 
-        h1:after {
-            content: "";
-            display: block;
-            margin: 0 auto;
-            width: 70%;
-            padding-top: 20px;
-            border-bottom: 1px solid var(--main-dark-primary);
-        }
-
     .card {
         width: auto;
         margin: auto;
@@ -167,7 +158,7 @@ a.navbar-brand {
     }
 
     .main-container {
-        margin-top: 125px;
+        margin-top: 100px;
     }
 }
 
