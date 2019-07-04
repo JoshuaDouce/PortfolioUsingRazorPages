@@ -5,20 +5,29 @@
     var projects = await ProjectsService.GetAllAsync();
 }
 
-    <div class="projects-main">
-        @foreach (var project in projects)
-        {
-            <div class="project">
-                <a asp-page="/Projects/Details" asp-route-id="@project.Id">
-                    <div class="card project-list-card">
-                        <h5 class="card-title">@project.Name</h5>
-                        <img src="@project.GetInlineImageSrc()" class="project-image card-img-top" />
-                        <div class="card-body">
-                            <p class="card-text">@project.Body.Substring(0, 10)...</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        }
+<!-- Icon Divider -->
+<div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
     </div>
+    <div class="divider-custom-line"></div>
+</div>
+
+<div class="projects-main">
+    @foreach (var project in projects)
+    {
+        <div class="project">
+            <a asp-page="/Projects/Detail" asp-route-id="@project.Id">
+                <div class="card project-list-card">
+                    <h5 class="card-title">@project.Name</h5>
+                    <img src="@project.GetInlineImageSrc()" class="project-image card-img-top" />
+                    <div class="card-body">
+                        <p class="card-text">@project.Body.Substring(0, 10)...</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
 

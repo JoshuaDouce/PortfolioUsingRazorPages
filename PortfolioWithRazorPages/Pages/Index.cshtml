@@ -10,32 +10,43 @@
 
 }
 
-    <div class="index-header-container bg-primary text-white text-center">
-        <!-- Masthead Heading -->
-        <h1 class="masthead-heading text-uppercase mb-0" id="index-main-title">Josh Douce</h1>
+<div class="index-header-container bg-primary text-white text-center">
+    <!-- Masthead Heading -->
+    <h1 class="masthead-heading text-uppercase mb-0" id="index-main-title">Josh Douce</h1>
 
-        <!-- Icon Divider -->
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
-            </div>
-            <div class="divider-custom-line"></div>
+    <!-- Icon Divider -->
+    <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
         </div>
-
-        <!-- Masthead Subheading -->
-        <p class="masthead-subheading mb-0" id="index-subtitle">Software Developer</p>
-
-        <div class="social-media-grid-container">
-            <a href="https://github.com/JoshuaDouce" target="_blank"><img src="~/media/icons8-github-white.svg" class="social-icon"/></a>
-            <a href="https://www.linkedin.com/in/joshua-douce-520170109/" target="_blank"><img src="~/media/icons8-linkedin.svg" class="social-icon"/></a>
-            <a href="https://twitter.com/JoshDouce" target="_blank"><img src="~/media/icons8-twitter.svg" class="social-icon"/></a>
-        </div>
-
+        <div class="divider-custom-line"></div>
     </div>
 
+    <!-- Masthead Subheading -->
+    <p class="masthead-subheading mb-0" id="index-subtitle">Software Developer</p>
+
+    <div class="social-media-grid-container">
+        <a href="https://github.com/JoshuaDouce" target="_blank"><img src="~/media/icons8-github-white.svg" class="social-icon" /></a>
+        <a href="https://www.linkedin.com/in/joshua-douce-520170109/" target="_blank"><img src="~/media/icons8-linkedin.svg" class="social-icon" /></a>
+        <a href="https://twitter.com/JoshDouce" target="_blank"><img src="~/media/icons8-twitter.svg" class="social-icon" /></a>
+    </div>
+
+</div>
+
+
 <div class="container summary-container">
-    <h1>Projects</h1>
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+    </div>
+
     <div class="row home-projects-row">
         @foreach (var project in projects.Take(3))
         {
@@ -53,7 +64,17 @@
 </div>
 
 <div class="container summary-container" id="blog-summary">
-    <h1>Recent Posts</h1>
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Recent Posts</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+    </div>
+
     <div class="row home-blog-posts-row">
         @foreach (var post in blogPosts.Take(3))
         {

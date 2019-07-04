@@ -5,7 +5,16 @@
     var blogPosts = await BlogPostsService.GetAllAsync();
 }
 
-<div class="blog-posts-main">
+<!-- Icon Divider -->
+<div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+    </div>
+    <div class="divider-custom-line"></div>
+</div>
+
+<div class="blog-posts-main container">
     @foreach (var post in blogPosts)
     {
         <div class="blog">
