@@ -33,6 +33,10 @@
     width: 36px;
 }
 
+.index-header-container{
+    padding: 20px 0px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
