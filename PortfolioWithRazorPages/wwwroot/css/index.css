@@ -26,15 +26,21 @@
     margin: auto;
     width: 40%;
     height: 40px;
+    margin-top: 1rem;
 }
 
 .social-icon{
     height: 36px;
     width: 36px;
+    border-radius: 25%;
 }
 
+    .social-icon:hover {
+        background-color: var(--main-dark-primary);
+    }
+
 .index-header-container{
-    padding: 20px 0px;
+    padding: 5rem 0px;
 }
 
 .summary-container {
@@ -44,6 +50,10 @@
 #blog-summary {
     margin-bottom: 4rem;
     padding-bottom: 1rem;
+}
+
+#index-subtitle {
+    font-weight: bold;
 }
 
 /* Extra small devices (phones, 600px and down) */
