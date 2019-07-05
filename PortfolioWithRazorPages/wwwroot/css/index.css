@@ -69,14 +69,9 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .home-projects-row, .home-blog-posts-row {
+    .home-blog-posts-row {
         text-align: center;
         padding-top: 20px;
-    }
-
-    .home-projects-row {
-        width: 100%;
-        margin: 0;
     }
 
     .project-card {

@@ -18,13 +18,20 @@
 @media only screen and (min-width: 768px) {
     .project {
         margin: 5px;
-        width: 23%;
+        width: 32%;
+        height: 400px;
         display: inline-block;
     }
 
     .project-list-card {
         width: auto;
+        height: 100%;
     }
+
+        .project-list-card > img {
+            height: 250px;
+            overflow: hidden;
+        }
 
     .project-detail-container {
         display: inline-block;

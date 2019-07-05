@@ -47,7 +47,7 @@
         <div class="divider-custom-line"></div>
     </div>
 
-    <div class="row home-projects-row">
+    <div class="row">
         @foreach (var project in projects.Take(3))
         {
             <a asp-page="/Projects/Detail" asp-route-id="@project.Id" class="project-card">
