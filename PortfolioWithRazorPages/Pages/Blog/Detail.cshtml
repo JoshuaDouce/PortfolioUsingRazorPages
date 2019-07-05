@@ -1,5 +1,5 @@
 ﻿@page "{id}"
-@model PortfolioWithRazorPages.Pages.Blog.BlogModel
+@model PortfolioWithRazorPages.Pages.Blog.DetailModel
 @{
     var id = long.Parse((string)RouteData.Values["id"]);
     var blog = await BlogPostsService.FindAsync(id);

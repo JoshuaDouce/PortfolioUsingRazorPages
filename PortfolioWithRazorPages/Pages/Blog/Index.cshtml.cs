@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PortfolioWithRazorPages.Pages.Blog
 {
-    public class BlogsModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {
