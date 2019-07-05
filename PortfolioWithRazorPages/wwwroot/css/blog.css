@@ -21,19 +21,14 @@
         width: auto;
     }
 
-    .blog-detail-container {
-        display: inline-block;
-    }
-
     .blog-text-container {
-        width: 49%;
-        padding: 10px 10px;
+        padding: 1rem;
         text-align: center;
         float: right;
     }
 
-    .blog-detail-container > img {
-        height: auto;
-        width: 49%;
+    .blog-detail-container {
+        margin-top: 1rem;
+        padding-top: 1rem;
     }
 }

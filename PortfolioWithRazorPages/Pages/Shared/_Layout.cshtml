@@ -82,9 +82,16 @@
             <h2 class="title">@ViewData["Title"]</h2>
         }
         <partial name="_CookieConsentPartial" />
+
+        <div>
+            @if (IsSectionDefined("Header"))
+            {
+                @RenderSection("Header", false);
+            }
+        </div>
+
         @RenderBody()
     </div>
-
     <footer class="border-top footer">
         <div class="container">
             &copy; 2019 - Joshua Douce - Portfolio

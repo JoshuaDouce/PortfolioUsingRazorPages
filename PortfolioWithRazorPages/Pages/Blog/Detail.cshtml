@@ -7,8 +7,7 @@
     ViewData["Title"] = blog.Title;
 }
 
-<div class="blog-detail-container">
-    <img src="@blog.GetInlineImageSrc()" />
+<div class="container blog-detail-container">
     <div class="blog-text-container">
         <p>@blog.Body</p>
         <p>@blog.CreationDate.ToLongDateString()</p>
