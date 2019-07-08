@@ -42,7 +42,7 @@ namespace PortfolioWithRazorPages.Services
 
         public async Task SaveAsync(BlogPost blogPost)
         {
-            var isNew = blogPost.Id == default;
+            var isNew = blogPost.Id == default(long);
 
             _dbContext.Entry(blogPost).State = isNew ? EntityState.Added : EntityState.Modified;
 

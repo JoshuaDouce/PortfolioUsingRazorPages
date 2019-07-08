@@ -2,12 +2,14 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PortfolioWithRazorPages.Data;
+using PortfolioWithRazorPages.Models;
 using PortfolioWithRazorPages.Services;
 
 namespace PortfolioWithRazorPages
@@ -31,16 +33,16 @@ namespace PortfolioWithRazorPages
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services
-                .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie();
-
-            services.AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
             services.AddDbContext<PortfolioDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("DataContext"));
             });
+
+
+            services.AddMvc()
+                .AddRazorPagesOptions(options => {
+                    options.Conventions.AuthorizeFolder("/Admin");
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddScoped<IBlogPostsService, BlogPostsService>();
             services.AddScoped<IProjectsService, ProjectsService>();
@@ -52,6 +54,7 @@ namespace PortfolioWithRazorPages
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -59,14 +62,8 @@ namespace PortfolioWithRazorPages
                 app.UseHsts();
             }
 
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseAuthentication();
             app.UseCookiePolicy();
 
             app.UseMvc();

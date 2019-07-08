@@ -40,7 +40,7 @@ namespace PortfolioWithRazorPages.Services
 
         public async Task SaveAsync(Project project)
         {
-            var isNew = project.Id == default;
+            var isNew = project.Id == default(long);
 
             _dbContext.Entry(project).State = isNew ? EntityState.Added : EntityState.Modified;
 
