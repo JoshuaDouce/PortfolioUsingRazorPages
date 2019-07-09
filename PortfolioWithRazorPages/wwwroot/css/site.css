@@ -186,4 +186,285 @@ a.navbar-brand {
 @media only screen and (min-width: 1200px) {
 }
 
+/* About
+-------------------------------------------------- */
+.about-main {
+    text-align: center;
+    color: var(--main-dark-primary);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.about-text {
+    margin: 5px 10px;
+}
+
+.about-img {
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+}
+
+#about-me-img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+#alfie-rosie {
+    width: 75%;
+}
+
+@media only screen and (min-width: 768px) {
+    #about-me-img {
+        width: 15%;
+    }
+
+    #alfie-rosie {
+        width: 40%;
+    }
+}
+
+
+/* Blog
+-------------------------------------------------- */
+.blog-posts-main {
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+.blog-text-container {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .blog {
+        margin: 5px;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .blog-list-card {
+        width: auto;
+    }
+
+    .blog-text-container {
+        padding: 1rem;
+        text-align: center;
+        float: right;
+    }
+
+    .blog-detail-container {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+/* Contact
+-------------------------------------------------- */
+.contact-form {
+    padding-bottom: 10px;
+    margin-bottom: 75px;
+}
+
+
+/* CV
+-------------------------------------------------- */
+.cv-main {
+    padding: 10px;
+    margin-bottom: 75px;
+}
+
+
+/* Index
+-------------------------------------------------- */
+#homepage-top {
+    text-align: center;
+    background-color: white;
+    color: var(--main-dark-primary);
+    font-weight: bold;
+    font-size: medium;
+    padding: 10px;
+}
+
+#profile-img {
+    height: 100px;
+    width: 100px;
+    margin: 10px 10px 10px 5px;
+    border-radius: 50%;
+}
+
+.project-card, .blog-card {
+    width: 90%;
+    margin: 0px auto;
+    border: none;
+}
+
+.project-card {
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+    .project-card > .card {
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+.card-img-top {
+    overflow: hidden;
+    height: 150px;
+}
+
+.social-media-grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    width: 40%;
+    height: 40px;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    height: 36px;
+    width: 36px;
+    border-radius: 25%;
+}
+
+    .social-icon:hover {
+        background-color: var(--main-dark-primary);
+    }
+
+.index-header-container {
+    padding: 5rem 0px;
+}
+
+.summary-container {
+    margin-top: 1rem;
+}
+
+#blog-summary {
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+}
+
+#index-subtitle {
+    font-weight: bold;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .project-card, .blog-card {
+        height: 40%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .home-blog-posts-row {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .project-card {
+        width: 30%;
+        margin: auto;
+    }
+
+        .project-card > .card > img {
+            height: 15rem;
+        }
+
+    .blog-card {
+        width: 97%;
+        text-align: center;
+        font-weight: bold;
+        font-size: large;
+        margin: 10px auto;
+    }
+
+    #profile-img {
+        height: 150px;
+        width: 150px;
+        margin: 25px 15px 15px 10px;
+        border-radius: 50%;
+    }
+
+    #homepage-top {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    .social-media-grid-container {
+        width: 10%;
+    }
+}
+
+/* Projects
+-------------------------------------------------- */
+.projects-main {
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+.project-text-container {
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.project-detail-image {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.project-body {
+    padding-top: 1rem;
+    word-wrap: break-word;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .project {
+        margin: 5px;
+        width: 32%;
+        height: 400px;
+        display: inline-block;
+    }
+
+    .project-list-card {
+        width: auto;
+        height: 100%;
+    }
+
+        .project-list-card > img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+    .project-text-container {
+        width: 49%;
+        padding: 0px 10px;
+        text-align: center;
+        float: right;
+    }
+
+    .project-detail-image {
+        width: 50%;
+        height: auto;
+    }
+
+    .project-detail-container {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+}
+
 
