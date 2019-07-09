@@ -44,6 +44,12 @@ namespace PortfolioWithRazorPages
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdministratorRole",
+                     policy => policy.RequireRole("Administrator"));
+            });
+
             services.AddScoped<IBlogPostsService, BlogPostsService>();
             services.AddScoped<IProjectsService, ProjectsService>();
         }

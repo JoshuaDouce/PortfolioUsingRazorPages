@@ -17,15 +17,18 @@ namespace PortfolioWithRazorPages.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<RegisterModel> _logger;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
+            RoleManager<IdentityRole> roleManager,
             ILogger<RegisterModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
             _logger = logger;
         }
 
@@ -64,10 +67,24 @@ namespace PortfolioWithRazorPages.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+
+                var roleCheck = await _roleManager.RoleExistsAsync("Administrator");
+
+                if (!roleCheck)
+                {
+                    await _roleManager.CreateAsync(new IdentityRole("Administrator"));
+                }
+
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    if (user.Email == "Joshuadouce@gmail.com")
+                    {
+                        await _userManager.AddToRoleAsync(user, "Administrator");
+                    }
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);
