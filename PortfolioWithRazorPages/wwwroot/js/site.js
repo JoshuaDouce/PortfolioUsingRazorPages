@@ -2,3 +2,9 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
+function sendEmail(message) {
+    var email = "Joshuadouce@gmail.com";
+    var subject = "Porfolio Contact";
+    var emailBody = message
+    document.location = "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
+}
