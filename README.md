@@ -11,3 +11,4 @@ It also provides to create and edit blog posts and projects in the browser.
   - Blog post managment
   - Projects managment
   - Can dynamically alter content on about + cv page
+  - Can have multiple images for projects/blogs
