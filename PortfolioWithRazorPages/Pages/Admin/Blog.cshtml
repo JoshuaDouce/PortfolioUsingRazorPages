@@ -3,6 +3,33 @@
 @{
     ViewData["Title"] = "Blog";
     Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+    var blogPosts = await BlogPostsService.GetAllAsync();
 }
+<div class="container">
+    <h1>Manage Posts</h1>
+</div>
 
-<h1>Blog</h1>
+<div class="container">
+    @foreach (var post in blogPosts)
+    {
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-2">
+            @post.Id
+        </div>
+        <div class="col-2">
+            @post.Title
+        </div>
+        <div class="col-2">
+            @post.CreationDate
+        </div>
+        <a href="~/Admin/AddEditBlogPost/@post.Id" class="btn btn-primary col-1">
+            Edit
+        </a>
+        <form method="post" class="col-1">
+            <button type="submit" asp-page-handler="Delete" asp-route-id="@post.Id" class="btn btn-danger">Delete</button>
+        </form>
+        <div class="col-2"></div>
+    </div>
+    }
+</div>

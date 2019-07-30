@@ -61,7 +61,7 @@ namespace PortfolioWithRazorPages.Pages.Admin
             return RedirectToPage("/Blog/Detail", new { id = blogPost.Id });
         }
 
-        public async Task<IActionResult> OnPostDelete()
+        public async Task<IActionResult> OnPostDelete(long? Id)
         {
             await BlogPostsService.DeleteAsync(Id.Value);
             return RedirectToPage("/Blog/Index");
